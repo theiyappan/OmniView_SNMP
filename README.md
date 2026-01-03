@@ -2,10 +2,8 @@
 <img src="https://img.icons8.com/?size=512&id=55494&format=png" align="right" width="30%" style="margin: -20px 0 0 20px;">
 <h1>OMNIVIEW_SNMP</h1>
 <p align="left">
-	<em><code>❯ REPLACE-ME</code></em>
 </p>
 <p align="left">
-	<img src="https://img.shields.io/github/license/theiyappan/OmniView_SNMP?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=2d2098" alt="license">
 	<img src="https://img.shields.io/github/last-commit/theiyappan/OmniView_SNMP?style=for-the-badge&logo=git&logoColor=white&color=2d2098" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/theiyappan/OmniView_SNMP?style=for-the-badge&color=2d2098" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/theiyappan/OmniView_SNMP?style=for-the-badge&color=2d2098" alt="repo-language-count">
