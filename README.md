@@ -37,13 +37,23 @@
 
 ##  Overview
 
-<code>❯ REPLACE-ME</code>
+**OmniView_SNMP** is a robust, portable Java application designed for network administrators and developers to interact with SNMP agents. Unlike traditional heavy Network Management Systems (NMS), OmniView is **MIB-less**, meaning it relies on an internal dictionary and smart formatting rather than requiring external `.mib` files to be loaded.
+
+It is specifically engineered to handle **SNMPv3** complexity, featuring a custom **Manual Engine ID Injection** mechanism that solves common "Unknown User Name" and discovery timeout errors often encountered when connecting to Net-SNMP agents.
 
 ---
 
 ##  Features
 
-<code>❯ REPLACE-ME</code>
+* **Protocol Support:** Full support for SNMP **v1**, **v2c**, and **v3**.
+* **Advanced Security:** Implements SNMPv3 USM with support for:
+    * `noAuthNoPriv` (Level 1)
+    * `authNoPriv` (Level 2 - MD5)
+    * `authPriv` (Level 3 - MD5/SHA + DES)
+* **MIB-less Browsing:** Instantly view OID trees without configuring external MIB files, using a built-in `OidDictionary`.
+* **Manual Engine ID:** Bypasses unstable discovery phases by allowing hardcoded authoritative Engine IDs.
+* **Smart Formatting:** Automatically detects and converts `OctetStrings` (Hex vs. ASCII) into human-readable text.
+* **Operations:** Supports `WALK`, `GET`, `GET_NEXT`, `GET_BULK`, and `SET`.
 
 ---
 
@@ -192,28 +202,29 @@ Install OmniView_SNMP using one of the following methods:
 ❯ cd OmniView_SNMP
 ```
 
-3. Install the project dependencies:
+3. Install Net-Snmp for detailed testing(using choco):
 
-echo 'INSERT-INSTALL-COMMAND-HERE'
+Windows:
+```sh
+❯ choco install net-snmp
+```
+For manual installing for windows, visit:https://sourceforge.net/projects/net-snmp/files/net-snmp%20binaries/
 
+Linux:
+```sh
+❯ sudo apt-get update
+❯ sudo apt-get install snmp snmpd libsnmp-dev
+```
+
+Mac:
+```sh
+❯ brew install net-snmp
+```
 
 
 ###  Usage
-Run OmniView_SNMP using the following command:
-echo 'INSERT-RUN-COMMAND-HERE'
+Run OmniView_SNMP by running the .bat file
 
-###  Testing
-Run the test suite using the following command:
-echo 'INSERT-TEST-COMMAND-HERE'
-
----
-##  Project Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
 
 ##  Contributing
 
@@ -246,26 +257,5 @@ echo 'INSERT-TEST-COMMAND-HERE'
 8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
 </details>
 
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/theiyappan/OmniView_SNMP/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=theiyappan/OmniView_SNMP">
-   </a>
-</p>
-</details>
 
----
 
-##  License
-
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----
